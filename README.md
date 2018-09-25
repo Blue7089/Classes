@@ -24,6 +24,8 @@ private:
   
   public:
   
+  person();
+  
   person(const string&,unsigned long,const string&);     // contsructor                              
   
   ~person();                                     // destructor
@@ -52,3 +54,25 @@ int main()
 }
 
 ```
+### Constructor
+>A constructor which is function of class name is known as constructor.for example,we have a person class name and we also declared in as person(). A constructor without parameter is referred to as a default constructor. For instance,person(); in person class is an default constructor.It only called if an object definition does not intialize.If a class does not have any constructor then complier will create default constructor as a public member. 
+
+### Copy Constructor 
+```
+person  fperson("Alex",216379,"france");
+person  mperson(fperson);       
+
+```
+>Above example, the object mperson is initialized by calling the copy constructor with the fperson object.Each member of fperson is individually copied to mperson member.
+```
+mperson.name = fperson.name="Alex";
+mperson.nr = fperson.nr = 216379;
+mperson.state = fperson.state= "france";
+
+```
+### Destructor
+```
+~person();
+
+```
+>this is how destructor is declared in public section.It is used to clean up the object that were created by constructor.It is involved in releasing memory and closing files. same as default constructor. it will also initalize with miniamal version of destructor by compiler  if it's not intialize.
